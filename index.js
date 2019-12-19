@@ -1,15 +1,15 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client()
 
-const token = 'NjI0OTYwMTIwOTkxOTA3ODYx.XfuSlg.mVJal_jv_6y2eTSgAzLxtzCSKn4';
+const token = 'NjM2NTU5MTEzNjM1MTAyNzIy.XbBdHw.-yDWXcuu16aGP-p784YsFdsjCSc';
 
 const PREFIX = '*';
 
-var Version = ':heart: Eevee Version 1.0.5 Beta :heart:';
+var Version = ':star: Version 1.1.5 Beta :star:';
 
 bot.on('ready', () => {
-    console.log('Eevee is online YAY');
-    bot.user.setActivity('Spotify', { type: 'LISTENING' }).catch(console.error);
+    console.log('Your assistant is online my diamond');
+    bot.user.setActivity('Rebel Meeting Setup', { type: 'LISTENING' }).catch(console.error);
 })
 
 
@@ -22,7 +22,7 @@ bot.on('message', message => {
             message.channel.sendMessage('Hello :heart: Say in #tickets -new and wait for a @staff member reply in the chat :heart:')
             break;
         case 'stafflist':
-            message.channel.sendMessage(':heart: bot owner woooosh bot admin Robert24120 :heart:')
+            message.channel.sendMessage(':star: Owner GreenGold:star: Staff Cyan Diamond :star: Staff Emeraldite :star: Rebel Leader 𝓗𝓸𝓵𝓶𝓺𝓾𝓲𝓼𝓽𝓲𝓽𝓮 :star:')
             break;
         case 'botversion':
             message.channel.sendMessage(Version)
@@ -39,24 +39,10 @@ bot.on('message', message => {
 
 bot.on('guildMemberAdd', member => {
 
-    const channel = member.guild.channels.find(channel => channel.name === "welcome-bye");
+    const channel = member.guild.channels.find(channel => channel.name === "welcome");
     if (!channel) return;
 
-    channel.send(`:heart:
-
-    ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌
-    ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐
-    ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐
-    ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐
-    ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌
-    ░░▐▒▒▒▄▄▒▒▒▒░░░▒▒▒▒▒▒▒▀▄▒▒▌
-    ░░▌░░▌█▀▒▒▒▒▒▄▀█▄▒▒▒▒▒▒▒█▒▐
-    ░▐░░░▒▒▒▒▒▒▒▒▌██▀▒▒░░░▒▒▒▀▄▌
-    ░▌░▒▄██▄▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▌
-    ▀▒▀▐▄█▄█▌▄░▀▒▒░░░░░░░░░░▒▒▒▐
-    ▐▒▒▐▀▐▀▒░▄▄▒▄▒▒▒▒▒▒░▒░▒░▒▒▒▒▌
-    ▐▒▒▒▀▀▄▄▒▒▒▄
-    ${member} :heart:`)
+    channel.send(`:star: Welcome to our server, ${member} please read the rules in the rules channel :star:`)
 
 });
 
@@ -68,7 +54,7 @@ bot.on('message', message => {
     switch (args[0]) {
         case 'bootsystem':
             if(!message.member.roles.find(r => r.name === "Kara")) return message.channel.send('Sorry i dont understand this command please try agian :heart:')
-            .then(msg => msg.delete(700));
+            .then(msg => msg.delete(500));
             message.reply('Please select a customization mode :heart:')
      break;
 
@@ -124,23 +110,6 @@ bot.on('message', message => {
 
 });
 
-bot.on('message', message => {
-    let args = message.content.substring(PREFIX.length).split(" ");
-
-    switch(args[0]){
-
-    case "poll":
-       const Embed = new RichEmbed()
-       .setColor(0xFFC300)
-       .setTitle(":heart: Inititrate Poll :heart:")
-       .setDescription("*poll to initiate a simple yes or no poll");
-
-       if(!args[1]){
-           message.channel.send(Embed);
-       }
-       break;
-    }
-  });
 
 
 bot.login(token);
