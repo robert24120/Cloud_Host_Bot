@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client()
 
-const token = 'NjI0OTYwMTIwOTkxOTA3ODYx.Xe5NdQ.kstWC4Jw83RJ5cSzO7y9_vaKe9g';
+const token = 'NjI0OTYwMTIwOTkxOTA3ODYx.XfuSlg.mVJal_jv_6y2eTSgAzLxtzCSKn4';
 
 const PREFIX = '*';
 
-var Version = ':heart: Eevee Version 1.0.0 Beta :heart:';
+var Version = ':heart: Eevee Version 1.0.5 Beta :heart:';
 
 bot.on('ready', () => {
     console.log('Eevee is online YAY');
