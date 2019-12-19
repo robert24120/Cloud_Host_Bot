@@ -140,21 +140,7 @@ bot.on('message', message => {
        }
        break;
     }
-
-});
-
-bot.on('message', (message) => {
-
-    if (message.content == '!role test') {
-        message.member.addRole(bot_bot);
-    }
-    else if(message.content == '!role test2') {
-        message.member.addRole(bot_mod);
-    }
-    else if(message.content == '!role test3') {
-        message.member.addRole(bot_admin);
-    }
-});
+  });
 
 
 bot.login(token);
